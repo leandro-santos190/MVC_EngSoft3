@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Entendendo MVC</title>
+</head>
+<body>
+    <h1>Lista de Carros</h1>
+    <hr>
+
+    <table>
+        <thead>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Cor</th>
+            <th>Preco</th>
+            <th>Ano</th>
+            <th>KM</th>
+        </thead>
+        <tbody>
+            <tr th:each="carro:${carros}">
+            <td th:text="${carro.marca}">Marca</td>
+            <td th:text="${carro.modelo}">Modelo</td>
+            <td th:text="${carro.cor}">Cor</td>
+            <td th:text="${carro.preco}">Preco</td>
+            <td th:text="${carro.ano}">Ano</td>
+            <td th:text="${carro.km}">KM</td>
+
+
+
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
